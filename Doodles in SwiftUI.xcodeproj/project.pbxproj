@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		934FDBA7277AF89300213B89 /* CGSize + Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FDBA6277AF89300213B89 /* CGSize + Operator.swift */; };
+		93814C59277719F100E3094C /* DoodlePadStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C55277719F100E3094C /* DoodlePadStore.swift */; };
+		93814C5A277719F100E3094C /* DoodlePadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C56277719F100E3094C /* DoodlePadInteractor.swift */; };
+		93814C5B277719F100E3094C /* DoodlePadModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C57277719F100E3094C /* DoodlePadModels.swift */; };
+		93814C5C277719F100E3094C /* DoodlePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C58277719F100E3094C /* DoodlePad.swift */; };
+		93814C6227771B3200E3094C /* CanvasRepresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C6127771B3200E3094C /* CanvasRepresentView.swift */; };
+		93814C642777231B00E3094C /* DoodleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C632777231B00E3094C /* DoodleColor.swift */; };
+		93814C67277726E300E3094C /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C66277726E300E3094C /* ColorPickerView.swift */; };
+		9385D1D027773BB500700072 /* BrushPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1CF27773BB500700072 /* BrushPickerView.swift */; };
+		9385D1D227773BD200700072 /* DoodleBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1D127773BD200700072 /* DoodleBrush.swift */; };
+		9385D1D62778284F00700072 /* DoodleDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1D52778284F00700072 /* DoodleDisplayView.swift */; };
+		9385D1D8277852BB00700072 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1D7277852BB00700072 /* Painter.swift */; };
+		9385D1DA2778665500700072 /* DrawPathMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1D92778665500700072 /* DrawPathMaker.swift */; };
+		9385D1DC2778696400700072 /* Pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 9385D1DB2778696400700072 /* Pencil.png */; };
+		9385D1DE2778996B00700072 /* CanvasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1DD2778996B00700072 /* CanvasController.swift */; };
+		9385D1E02778A50F00700072 /* DrawDoodleMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1DF2778A50F00700072 /* DrawDoodleMaker.swift */; };
+		9385D1E82778C9E300700072 /* DoodleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1E42778C9E300700072 /* DoodleStore.swift */; };
+		9385D1E92778C9E300700072 /* DoodleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1E52778C9E300700072 /* DoodleInteractor.swift */; };
+		9385D1EA2778C9E300700072 /* DoodleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1E62778C9E300700072 /* DoodleModels.swift */; };
+		9385D1EB2778C9E300700072 /* DoodleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1E72778C9E300700072 /* DoodleView.swift */; };
+		9385D1EE2778CA0B00700072 /* DoodleRepresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385D1ED2778CA0B00700072 /* DoodleRepresentView.swift */; };
+		93C099F027757D49000C9A09 /* Doodles_in_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C099EF27757D49000C9A09 /* Doodles_in_SwiftUIApp.swift */; };
+		93C099F227757D49000C9A09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C099F127757D49000C9A09 /* ContentView.swift */; };
+		93C099F427757D4A000C9A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C099F327757D4A000C9A09 /* Assets.xcassets */; };
+		93C099F727757D4A000C9A09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C099F627757D4A000C9A09 /* Preview Assets.xcassets */; };
+		93C09A0127757D4A000C9A09 /* RectCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C09A0027757D4A000C9A09 /* RectCalculatorTests.swift */; };
+		93C09A0B27757D4A000C9A09 /* Doodles_in_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C09A0A27757D4A000C9A09 /* Doodles_in_SwiftUIUITests.swift */; };
+		93C09A0D27757D4A000C9A09 /* Doodles_in_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C09A0C27757D4A000C9A09 /* Doodles_in_SwiftUIUITestsLaunchTests.swift */; };
+		93C09A222775D54B000C9A09 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C09A212775D54B000C9A09 /* CanvasView.swift */; };
+		93C09A242775D587000C9A09 /* DrawDoodle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C09A232775D587000C9A09 /* DrawDoodle.swift */; };
+		93C09A27277712C9000C9A09 /* StoreWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C09A26277712C9000C9A09 /* StoreWrapper.swift */; };
+		93C5CE832779BAD1003EFCCE /* DrawLineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE822779BAD1003EFCCE /* DrawLineMaker.swift */; };
+		93C5CE852779CEB9003EFCCE /* UIView + Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE842779CEB9003EFCCE /* UIView + Constraints.swift */; };
+		93C5CE872779F1FC003EFCCE /* CGPoint + Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE862779F1FC003EFCCE /* CGPoint + Operator.swift */; };
+		93C5CE89277A100B003EFCCE /* CanvasControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE88277A100B003EFCCE /* CanvasControllerTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93C099FD27757D4A000C9A09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93C099E427757D49000C9A09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93C099EB27757D49000C9A09;
+			remoteInfo = "Doodles in SwiftUI";
+		};
+		93C09A0727757D4A000C9A09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93C099E427757D49000C9A09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93C099EB27757D49000C9A09;
+			remoteInfo = "Doodles in SwiftUI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		934FDBA6277AF89300213B89 /* CGSize + Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize + Operator.swift"; sourceTree = "<group>"; };
+		93814C55277719F100E3094C /* DoodlePadStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlePadStore.swift; sourceTree = "<group>"; };
+		93814C56277719F100E3094C /* DoodlePadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlePadInteractor.swift; sourceTree = "<group>"; };
+		93814C57277719F100E3094C /* DoodlePadModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlePadModels.swift; sourceTree = "<group>"; };
+		93814C58277719F100E3094C /* DoodlePad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlePad.swift; sourceTree = "<group>"; };
+		93814C6127771B3200E3094C /* CanvasRepresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasRepresentView.swift; sourceTree = "<group>"; };
+		93814C632777231B00E3094C /* DoodleColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleColor.swift; sourceTree = "<group>"; };
+		93814C66277726E300E3094C /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		9385D1CF27773BB500700072 /* BrushPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushPickerView.swift; sourceTree = "<group>"; };
+		9385D1D127773BD200700072 /* DoodleBrush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleBrush.swift; sourceTree = "<group>"; };
+		9385D1D52778284F00700072 /* DoodleDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleDisplayView.swift; sourceTree = "<group>"; };
+		9385D1D7277852BB00700072 /* Painter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painter.swift; sourceTree = "<group>"; };
+		9385D1D92778665500700072 /* DrawPathMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawPathMaker.swift; sourceTree = "<group>"; };
+		9385D1DB2778696400700072 /* Pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pencil.png; path = Assets.xcassets/Pencil.imageset/Pencil.png; sourceTree = "<group>"; };
+		9385D1DD2778996B00700072 /* CanvasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasController.swift; sourceTree = "<group>"; };
+		9385D1DF2778A50F00700072 /* DrawDoodleMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawDoodleMaker.swift; sourceTree = "<group>"; };
+		9385D1E42778C9E300700072 /* DoodleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleStore.swift; sourceTree = "<group>"; };
+		9385D1E52778C9E300700072 /* DoodleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleInteractor.swift; sourceTree = "<group>"; };
+		9385D1E62778C9E300700072 /* DoodleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleModels.swift; sourceTree = "<group>"; };
+		9385D1E72778C9E300700072 /* DoodleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleView.swift; sourceTree = "<group>"; };
+		9385D1ED2778CA0B00700072 /* DoodleRepresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleRepresentView.swift; sourceTree = "<group>"; };
+		93C099EC27757D49000C9A09 /* Doodles in SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doodles in SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C099EF27757D49000C9A09 /* Doodles_in_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doodles_in_SwiftUIApp.swift; sourceTree = "<group>"; };
+		93C099F127757D49000C9A09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		93C099F327757D4A000C9A09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93C099F627757D4A000C9A09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93C099FC27757D4A000C9A09 /* Doodles in SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Doodles in SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C09A0027757D4A000C9A09 /* RectCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectCalculatorTests.swift; sourceTree = "<group>"; };
+		93C09A0627757D4A000C9A09 /* Doodles in SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Doodles in SwiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C09A0A27757D4A000C9A09 /* Doodles_in_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doodles_in_SwiftUIUITests.swift; sourceTree = "<group>"; };
+		93C09A0C27757D4A000C9A09 /* Doodles_in_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doodles_in_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93C09A212775D54B000C9A09 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		93C09A232775D587000C9A09 /* DrawDoodle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawDoodle.swift; sourceTree = "<group>"; };
+		93C09A26277712C9000C9A09 /* StoreWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWrapper.swift; sourceTree = "<group>"; };
+		93C5CE822779BAD1003EFCCE /* DrawLineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawLineMaker.swift; sourceTree = "<group>"; };
+		93C5CE842779CEB9003EFCCE /* UIView + Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Constraints.swift"; sourceTree = "<group>"; };
+		93C5CE862779F1FC003EFCCE /* CGPoint + Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint + Operator.swift"; sourceTree = "<group>"; };
+		93C5CE88277A100B003EFCCE /* CanvasControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasControllerTest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93C099E927757D49000C9A09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C099F927757D4A000C9A09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C09A0327757D4A000C9A09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93814C5D277719FB00E3094C /* DoodlePad */ = {
+			isa = PBXGroup;
+			children = (
+				9385D1E32778C50700700072 /* Doodle */,
+				93814C5E27771A2000E3094C /* Canvas */,
+				93814C652777253A00E3094C /* Pickers */,
+				93814C56277719F100E3094C /* DoodlePadInteractor.swift */,
+				93814C57277719F100E3094C /* DoodlePadModels.swift */,
+				93814C55277719F100E3094C /* DoodlePadStore.swift */,
+				93814C58277719F100E3094C /* DoodlePad.swift */,
+			);
+			path = DoodlePad;
+			sourceTree = "<group>";
+		};
+		93814C5E27771A2000E3094C /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				9385D1E22778C41600700072 /* Workers */,
+				93C09A212775D54B000C9A09 /* CanvasView.swift */,
+				9385D1DD2778996B00700072 /* CanvasController.swift */,
+				93C5CE822779BAD1003EFCCE /* DrawLineMaker.swift */,
+				93814C6127771B3200E3094C /* CanvasRepresentView.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		93814C652777253A00E3094C /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				93814C66277726E300E3094C /* ColorPickerView.swift */,
+				9385D1CF27773BB500700072 /* BrushPickerView.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		9385D1E12778C3E300700072 /* UtilityWorkers */ = {
+			isa = PBXGroup;
+			children = (
+				9385D1D7277852BB00700072 /* Painter.swift */,
+			);
+			path = UtilityWorkers;
+			sourceTree = "<group>";
+		};
+		9385D1E22778C41600700072 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				9385D1D92778665500700072 /* DrawPathMaker.swift */,
+				9385D1DF2778A50F00700072 /* DrawDoodleMaker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		9385D1E32778C50700700072 /* Doodle */ = {
+			isa = PBXGroup;
+			children = (
+				93C5CE8A277A2645003EFCCE /* Workers */,
+				9385D1EC2778C9FE00700072 /* Views */,
+				9385D1E42778C9E300700072 /* DoodleStore.swift */,
+				9385D1E52778C9E300700072 /* DoodleInteractor.swift */,
+				9385D1E62778C9E300700072 /* DoodleModels.swift */,
+				9385D1E72778C9E300700072 /* DoodleView.swift */,
+			);
+			path = Doodle;
+			sourceTree = "<group>";
+		};
+		9385D1EC2778C9FE00700072 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9385D1D52778284F00700072 /* DoodleDisplayView.swift */,
+				9385D1ED2778CA0B00700072 /* DoodleRepresentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		93C099E327757D49000C9A09 = {
+			isa = PBXGroup;
+			children = (
+				93C099EE27757D49000C9A09 /* Doodles in SwiftUI */,
+				93C099FF27757D4A000C9A09 /* Doodles in SwiftUITests */,
+				93C09A0927757D4A000C9A09 /* Doodles in SwiftUIUITests */,
+				93C099ED27757D49000C9A09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93C099ED27757D49000C9A09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93C099EC27757D49000C9A09 /* Doodles in SwiftUI.app */,
+				93C099FC27757D4A000C9A09 /* Doodles in SwiftUITests.xctest */,
+				93C09A0627757D4A000C9A09 /* Doodles in SwiftUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93C099EE27757D49000C9A09 /* Doodles in SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				93C099EF27757D49000C9A09 /* Doodles_in_SwiftUIApp.swift */,
+				93C09A1D27757EB7000C9A09 /* UIs */,
+				9385D1E12778C3E300700072 /* UtilityWorkers */,
+				93C09A202775D469000C9A09 /* Models */,
+				93C09A25277712B3000C9A09 /* Utilities */,
+				9385D1DB2778696400700072 /* Pencil.png */,
+				93C099F327757D4A000C9A09 /* Assets.xcassets */,
+				93C099F527757D4A000C9A09 /* Preview Content */,
+			);
+			path = "Doodles in SwiftUI";
+			sourceTree = "<group>";
+		};
+		93C099F527757D4A000C9A09 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				93C099F627757D4A000C9A09 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93C099FF27757D4A000C9A09 /* Doodles in SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				93C09A0027757D4A000C9A09 /* RectCalculatorTests.swift */,
+				93C5CE88277A100B003EFCCE /* CanvasControllerTest.swift */,
+			);
+			path = "Doodles in SwiftUITests";
+			sourceTree = "<group>";
+		};
+		93C09A0927757D4A000C9A09 /* Doodles in SwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				93C09A0A27757D4A000C9A09 /* Doodles_in_SwiftUIUITests.swift */,
+				93C09A0C27757D4A000C9A09 /* Doodles_in_SwiftUIUITestsLaunchTests.swift */,
+			);
+			path = "Doodles in SwiftUIUITests";
+			sourceTree = "<group>";
+		};
+		93C09A1D27757EB7000C9A09 /* UIs */ = {
+			isa = PBXGroup;
+			children = (
+				93C099F127757D49000C9A09 /* ContentView.swift */,
+				93814C5D277719FB00E3094C /* DoodlePad */,
+			);
+			path = UIs;
+			sourceTree = "<group>";
+		};
+		93C09A202775D469000C9A09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93C09A232775D587000C9A09 /* DrawDoodle.swift */,
+				93814C632777231B00E3094C /* DoodleColor.swift */,
+				9385D1D127773BD200700072 /* DoodleBrush.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93C09A25277712B3000C9A09 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				93C5CE842779CEB9003EFCCE /* UIView + Constraints.swift */,
+				93C5CE862779F1FC003EFCCE /* CGPoint + Operator.swift */,
+				934FDBA6277AF89300213B89 /* CGSize + Operator.swift */,
+				93C09A26277712C9000C9A09 /* StoreWrapper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		93C5CE8A277A2645003EFCCE /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93C099EB27757D49000C9A09 /* Doodles in SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93C09A1027757D4A000C9A09 /* Build configuration list for PBXNativeTarget "Doodles in SwiftUI" */;
+			buildPhases = (
+				93C099E827757D49000C9A09 /* Sources */,
+				93C099E927757D49000C9A09 /* Frameworks */,
+				93C099EA27757D49000C9A09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Doodles in SwiftUI";
+			productName = "Doodles in SwiftUI";
+			productReference = 93C099EC27757D49000C9A09 /* Doodles in SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93C099FB27757D4A000C9A09 /* Doodles in SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93C09A1327757D4A000C9A09 /* Build configuration list for PBXNativeTarget "Doodles in SwiftUITests" */;
+			buildPhases = (
+				93C099F827757D4A000C9A09 /* Sources */,
+				93C099F927757D4A000C9A09 /* Frameworks */,
+				93C099FA27757D4A000C9A09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93C099FE27757D4A000C9A09 /* PBXTargetDependency */,
+			);
+			name = "Doodles in SwiftUITests";
+			productName = "Doodles in SwiftUITests";
+			productReference = 93C099FC27757D4A000C9A09 /* Doodles in SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		93C09A0527757D4A000C9A09 /* Doodles in SwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93C09A1627757D4A000C9A09 /* Build configuration list for PBXNativeTarget "Doodles in SwiftUIUITests" */;
+			buildPhases = (
+				93C09A0227757D4A000C9A09 /* Sources */,
+				93C09A0327757D4A000C9A09 /* Frameworks */,
+				93C09A0427757D4A000C9A09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93C09A0827757D4A000C9A09 /* PBXTargetDependency */,
+			);
+			name = "Doodles in SwiftUIUITests";
+			productName = "Doodles in SwiftUIUITests";
+			productReference = 93C09A0627757D4A000C9A09 /* Doodles in SwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93C099E427757D49000C9A09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					93C099EB27757D49000C9A09 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					93C099FB27757D4A000C9A09 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 93C099EB27757D49000C9A09;
+					};
+					93C09A0527757D4A000C9A09 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 93C099EB27757D49000C9A09;
+					};
+				};
+			};
+			buildConfigurationList = 93C099E727757D49000C9A09 /* Build configuration list for PBXProject "Doodles in SwiftUI" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93C099E327757D49000C9A09;
+			productRefGroup = 93C099ED27757D49000C9A09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93C099EB27757D49000C9A09 /* Doodles in SwiftUI */,
+				93C099FB27757D4A000C9A09 /* Doodles in SwiftUITests */,
+				93C09A0527757D4A000C9A09 /* Doodles in SwiftUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93C099EA27757D49000C9A09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9385D1DC2778696400700072 /* Pencil.png in Resources */,
+				93C099F727757D4A000C9A09 /* Preview Assets.xcassets in Resources */,
+				93C099F427757D4A000C9A09 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C099FA27757D4A000C9A09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C09A0427757D4A000C9A09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93C099E827757D49000C9A09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93814C5A277719F100E3094C /* DoodlePadInteractor.swift in Sources */,
+				9385D1E02778A50F00700072 /* DrawDoodleMaker.swift in Sources */,
+				93814C5B277719F100E3094C /* DoodlePadModels.swift in Sources */,
+				93814C5C277719F100E3094C /* DoodlePad.swift in Sources */,
+				9385D1EA2778C9E300700072 /* DoodleModels.swift in Sources */,
+				93C09A27277712C9000C9A09 /* StoreWrapper.swift in Sources */,
+				93C099F227757D49000C9A09 /* ContentView.swift in Sources */,
+				93814C6227771B3200E3094C /* CanvasRepresentView.swift in Sources */,
+				93C099F027757D49000C9A09 /* Doodles_in_SwiftUIApp.swift in Sources */,
+				93C5CE832779BAD1003EFCCE /* DrawLineMaker.swift in Sources */,
+				9385D1E82778C9E300700072 /* DoodleStore.swift in Sources */,
+				93814C59277719F100E3094C /* DoodlePadStore.swift in Sources */,
+				9385D1DE2778996B00700072 /* CanvasController.swift in Sources */,
+				93C5CE852779CEB9003EFCCE /* UIView + Constraints.swift in Sources */,
+				93C09A222775D54B000C9A09 /* CanvasView.swift in Sources */,
+				9385D1D62778284F00700072 /* DoodleDisplayView.swift in Sources */,
+				9385D1EE2778CA0B00700072 /* DoodleRepresentView.swift in Sources */,
+				9385D1DA2778665500700072 /* DrawPathMaker.swift in Sources */,
+				9385D1D227773BD200700072 /* DoodleBrush.swift in Sources */,
+				93814C642777231B00E3094C /* DoodleColor.swift in Sources */,
+				9385D1EB2778C9E300700072 /* DoodleView.swift in Sources */,
+				93814C67277726E300E3094C /* ColorPickerView.swift in Sources */,
+				9385D1D027773BB500700072 /* BrushPickerView.swift in Sources */,
+				9385D1E92778C9E300700072 /* DoodleInteractor.swift in Sources */,
+				93C09A242775D587000C9A09 /* DrawDoodle.swift in Sources */,
+				93C5CE872779F1FC003EFCCE /* CGPoint + Operator.swift in Sources */,
+				934FDBA7277AF89300213B89 /* CGSize + Operator.swift in Sources */,
+				9385D1D8277852BB00700072 /* Painter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C099F827757D4A000C9A09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C09A0127757D4A000C9A09 /* RectCalculatorTests.swift in Sources */,
+				93C5CE89277A100B003EFCCE /* CanvasControllerTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C09A0227757D4A000C9A09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C09A0B27757D4A000C9A09 /* Doodles_in_SwiftUIUITests.swift in Sources */,
+				93C09A0D27757D4A000C9A09 /* Doodles_in_SwiftUIUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93C099FE27757D4A000C9A09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93C099EB27757D49000C9A09 /* Doodles in SwiftUI */;
+			targetProxy = 93C099FD27757D4A000C9A09 /* PBXContainerItemProxy */;
+		};
+		93C09A0827757D4A000C9A09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93C099EB27757D49000C9A09 /* Doodles in SwiftUI */;
+			targetProxy = 93C09A0727757D4A000C9A09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		93C09A0E27757D4A000C9A09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93C09A0F27757D4A000C9A09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93C09A1127757D4A000C9A09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Doodles in SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Y4TPNE48W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Taipei.Doodles-in-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93C09A1227757D4A000C9A09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Doodles in SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Y4TPNE48W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Taipei.Doodles-in-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		93C09A1427757D4A000C9A09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y4TPNE48W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Taipei.Doodles-in-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Doodles in SwiftUI.app/Doodles in SwiftUI";
+			};
+			name = Debug;
+		};
+		93C09A1527757D4A000C9A09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y4TPNE48W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Taipei.Doodles-in-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Doodles in SwiftUI.app/Doodles in SwiftUI";
+			};
+			name = Release;
+		};
+		93C09A1727757D4A000C9A09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y4TPNE48W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Taipei.Doodles-in-SwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Doodles in SwiftUI";
+			};
+			name = Debug;
+		};
+		93C09A1827757D4A000C9A09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y4TPNE48W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Taipei.Doodles-in-SwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Doodles in SwiftUI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93C099E727757D49000C9A09 /* Build configuration list for PBXProject "Doodles in SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93C09A0E27757D4A000C9A09 /* Debug */,
+				93C09A0F27757D4A000C9A09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93C09A1027757D4A000C9A09 /* Build configuration list for PBXNativeTarget "Doodles in SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93C09A1127757D4A000C9A09 /* Debug */,
+				93C09A1227757D4A000C9A09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93C09A1327757D4A000C9A09 /* Build configuration list for PBXNativeTarget "Doodles in SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93C09A1427757D4A000C9A09 /* Debug */,
+				93C09A1527757D4A000C9A09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93C09A1627757D4A000C9A09 /* Build configuration list for PBXNativeTarget "Doodles in SwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93C09A1727757D4A000C9A09 /* Debug */,
+				93C09A1827757D4A000C9A09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93C099E427757D49000C9A09 /* Project object */;
+}
