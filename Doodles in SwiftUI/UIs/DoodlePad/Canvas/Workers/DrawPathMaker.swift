@@ -9,8 +9,8 @@ import UIKit
 
 struct DrawPathMaker {
     
-    private let defaultLineWidth: CGFloat = 6
-    private let minLineWidth: CGFloat = 5
+    private let defaultLineWidth: CGFloat = 8
+    private let minLineWidth: CGFloat = 3
     private let forceSensitivity: CGFloat = 10
     private let tiltThreshold: CGFloat = .pi / 6
     

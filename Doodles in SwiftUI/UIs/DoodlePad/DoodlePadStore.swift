@@ -11,6 +11,15 @@
 import Foundation
 import SwiftUI
 
+protocol DoodlePadPresentationLogic {
+    func updateDoodles(_ doodles: [DrawDoodle])
+}
+
+protocol DoodlePadStoreSpec: AnyObservableObject {
+    var doodles: [DrawDoodle] { get set }
+    func add(_ doodle: DrawDoodle)
+}
+
 final class DoodlePadStore: ObservableObject, DoodlePadPresentationLogic, DoodlePadStoreSpec {
     
     // MARK: DoodlePadStoreSpec
@@ -23,4 +32,8 @@ final class DoodlePadStore: ObservableObject, DoodlePadPresentationLogic, Doodle
     // MARK: Private properties
     
     // MARK: DoodlePadPresentationLogic
+    
+    func updateDoodles(_ doodles: [DrawDoodle]) {
+        self.doodles = doodles
+    }
 }

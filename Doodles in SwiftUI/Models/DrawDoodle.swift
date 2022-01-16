@@ -15,7 +15,7 @@ struct DrawPath {
     
     // location
     let location: CGPoint
-    let previousLocation: CGPoint
+    var previousLocation: CGPoint
     
     //
     let width: CGFloat
@@ -32,13 +32,16 @@ struct DrawLine {
 
 final class DrawDoodle: Identifiable, ObservableObject {
     let id: String
-    fileprivate(set) var isInOneColor: Bool
-    fileprivate(set) var isInOneBrush: Bool
+    let isInOneColor: Bool //
+    let isInOneBrush: Bool //
+    
     var frame: CGRect
-    fileprivate(set) var lines: [DrawLine]
+    var lines: [DrawLine]
+    
     var rotationDegree: CGFloat = 0
     var scale: CGFloat = 1
-    fileprivate(set) var zPriority: Double = 0
+    
+    fileprivate(set) var zPriority: Double = 0 //
     
     var isFocus: Bool = false
     

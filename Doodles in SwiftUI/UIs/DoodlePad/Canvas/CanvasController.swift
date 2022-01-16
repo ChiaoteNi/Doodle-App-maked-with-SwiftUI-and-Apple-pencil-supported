@@ -68,7 +68,7 @@ final class CanvasController: CanvasBusinessLogic {
                 paintColor: self.currentColor,
                 paintBrush: self.currentBrush,
                 frame: rect,
-                paths: paths ?? []
+                paths: paths
             )
         }
     }
@@ -77,7 +77,7 @@ final class CanvasController: CanvasBusinessLogic {
         handleQueue.async { [weak self] in
             guard let self = self else { return }
             guard let line = self.currentLine else { return }
-            guard let paths = self.updateLocationAndMakePaths(touches) else { return }
+            let paths = self.updateLocationAndMakePaths(touches)
             self.currentPaths?.append(contentsOf: paths)
             self.view?.displayNewDrawing(
                 paths,
@@ -88,6 +88,7 @@ final class CanvasController: CanvasBusinessLogic {
     }
     
     func touchEnd() {
+        print("💧")
         handleQueue.async { [weak self] in
             guard let self = self else { return }
             guard let currentLine = self.currentLine else { return }
@@ -133,11 +134,37 @@ final class CanvasController: CanvasBusinessLogic {
 // MARK: - Private functions.
 extension CanvasController {
 
-    private func updateLocationAndMakePaths(_ touches: [UITouch]) -> [DrawPath]? {
-        return touches.map {
-            let path = pathMaker.makeDrawPath(with: $0)
-            frameCalculator.setLocations([path.location])
-            return path
+    private func updateLocationAndMakePaths(_ touches: [UITouch]) -> [DrawPath] {
+        var currentValidatePath: DrawPath?
+        var currentSlope: CGFloat = 0
+        return touches.compactMap {
+            var path = pathMaker.makeDrawPath(with: $0)
+
+            if let currentPath = currentValidatePath {
+                let slope = currentPath.location.slope(path.location)
+                if slope == currentSlope {
+                    return nil
+                } else {
+                    path.previousLocation = currentPath.location
+                    currentSlope = slope
+                    currentValidatePath = path
+                    frameCalculator.setLocations([path.location])
+                    return path
+                }
+            } else {
+                currentValidatePath = path
+                frameCalculator.setLocations([path.location])
+                return path
+            }
         }
+    }
+}
+
+private extension CGPoint {
+
+    func slope(_ point: CGPoint) -> CGFloat {
+        let diffX = x - point.x
+        let diffY = y - point.y
+        return x == 0 ? 0 : diffY / diffX
     }
 }

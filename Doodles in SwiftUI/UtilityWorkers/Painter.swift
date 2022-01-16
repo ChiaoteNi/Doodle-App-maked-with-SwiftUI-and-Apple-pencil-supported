@@ -17,7 +17,8 @@ struct Painter {
         canvasRect: CGRect,
         backgroundImage: UIImage?,
         color: UIColor,
-        brush: DoodleBrush
+        brush: DoodleBrush,
+        lineWidthDiff: CGFloat = 0
     ) -> UIImage {
         UIGraphicsImageRenderer(size: canvasRect.size).image { context in
             UIColor.white.withAlphaComponent(0).setFill()
@@ -29,7 +30,8 @@ struct Painter {
                     context: context.cgContext,
                     path: $0,
                     tintColor: brush.getBrushTintColor(with: color),
-                    offset: offset
+                    offset: offset,
+                    lineWidthDiff: lineWidthDiff
                 )
             }
          }
@@ -39,14 +41,15 @@ struct Painter {
         context: CGContext,
         path: DrawPath,
         tintColor: UIColor,
-        offset: CGPoint
+        offset: CGPoint,
+        lineWidthDiff: CGFloat
     ){
         let previousLocation = path.previousLocation + offset
         let location = path.location + offset
         
         tintColor.set()
         context.setAlpha(path.alpha)
-        context.setLineWidth(path.width)
+        context.setLineWidth(path.width + lineWidthDiff)
         context.setLineCap(.round)
         if context.path == nil {
             context.move(to: previousLocation)

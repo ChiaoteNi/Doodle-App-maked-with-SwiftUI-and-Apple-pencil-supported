@@ -17,10 +17,11 @@ struct BrushPickerView: View {
             ForEach(DoodleBrush.allCases, id: \.self) { item in
                 let isPickedItem = pickedBrush == item
                 VStack {
-                    Circle()
-                        .foregroundColor(Color(item.getBrushTintColor(with: .darkGray)))
+                    makeIcon(for: item)
                         .frame(width: diameter, height: diameter)
+                        .mask(Circle().frame(width: diameter, height: diameter))
                     Text(item.name)
+                        .foregroundColor(.black)
                 }
                 .offset(
                     x: isPickedItem ? 2 : 0,
@@ -41,7 +42,20 @@ struct BrushPickerView: View {
 
 // MARK: - Private functions
 extension BrushPickerView {
-    
+
+    @ViewBuilder
+    private func makeIcon(for brush: DoodleBrush) -> some View {
+        switch brush {
+        case .pencil:
+            if let image = brush.brushImage {
+                Image(uiImage: image)
+            } else {
+                EmptyView()
+            }
+        case .marker:
+            Color(brush.getBrushTintColor(with: .darkGray))
+        }
+    }
 }
 
 

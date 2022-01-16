@@ -17,52 +17,52 @@ final class CanvasView: UIControl {
     var paintColor = CurrentValueSubject<DoodleColor, Never>(.blue)
     var paintBrush = CurrentValueSubject<DoodleBrush, Never>(.pencil)
     private var cancellables = Set<AnyCancellable>()
-    
+
     private var controller: CanvasBusinessLogic?
     private let painter = Painter()
     private var drawingImage: UIImage?
     private var backgroundImage: UIImage?
     private let saveButton: UIButton = UIButton(type: .close)
-    
+
     init(store: DoodleStorageLogic){
         super.init(frame: .zero)
-        
+
         let controller = CanvasController(store: store)
         controller.view = self
         self.controller = controller
         setUp()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func draw(_ rect: CGRect) {
         drawingImage?.draw(in: rect)
         backgroundImage?.draw(in: rect)
     }
-    
+
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         controller?.makeDoodle()
     }
-    
+
     //MARK: - Touch event
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touches = getTouches(touches, with: event) else { return }
         controller?.startTouching(touches, in: bounds)
     }
-    
+
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touches = getTouches(touches, with: event) else { return }
         controller?.touchesMoved(touches)
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         controller?.touchEnd()
     }
-    
+
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         controller?.touchEnd()
     }

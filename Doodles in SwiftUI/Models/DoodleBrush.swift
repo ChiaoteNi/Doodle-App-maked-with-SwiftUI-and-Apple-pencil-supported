@@ -18,6 +18,13 @@ enum DoodleBrush: CaseIterable {
         case .pencil: return "鉛筆"
         }
     }
+
+    var brushImage: UIImage? {
+        switch self {
+        case .marker: return nil
+        case .pencil: return UIImage(named: "Pencil")
+        }
+    }
     
     func getBrushTintColor(with color: UIColor) -> UIColor {
         guard let image = brushImage else { return color }
@@ -26,12 +33,5 @@ enum DoodleBrush: CaseIterable {
             image.draw(at: .zero)
         }
         return UIColor(patternImage: tintedImage)
-    }
-    
-    private var brushImage: UIImage? {
-        switch self {
-        case .marker: return nil
-        case .pencil: return UIImage(named: "Pencil")
-        }
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		934FDBA7277AF89300213B89 /* CGSize + Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FDBA6277AF89300213B89 /* CGSize + Operator.swift */; };
+		934FDBA9277B3DC300213B89 /* BrushSizeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FDBA8277B3DC300213B89 /* BrushSizeSlider.swift */; };
 		93814C59277719F100E3094C /* DoodlePadStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C55277719F100E3094C /* DoodlePadStore.swift */; };
 		93814C5A277719F100E3094C /* DoodlePadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C56277719F100E3094C /* DoodlePadInteractor.swift */; };
 		93814C5B277719F100E3094C /* DoodlePadModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93814C57277719F100E3094C /* DoodlePadModels.swift */; };
@@ -42,6 +43,7 @@
 		93C5CE852779CEB9003EFCCE /* UIView + Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE842779CEB9003EFCCE /* UIView + Constraints.swift */; };
 		93C5CE872779F1FC003EFCCE /* CGPoint + Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE862779F1FC003EFCCE /* CGPoint + Operator.swift */; };
 		93C5CE89277A100B003EFCCE /* CanvasControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE88277A100B003EFCCE /* CanvasControllerTest.swift */; };
+		93E16FA82792AEBE00460793 /* Array + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E16FA72792AEBE00460793 /* Array + extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		934FDBA6277AF89300213B89 /* CGSize + Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize + Operator.swift"; sourceTree = "<group>"; };
+		934FDBA8277B3DC300213B89 /* BrushSizeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushSizeSlider.swift; sourceTree = "<group>"; };
 		93814C55277719F100E3094C /* DoodlePadStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlePadStore.swift; sourceTree = "<group>"; };
 		93814C56277719F100E3094C /* DoodlePadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlePadInteractor.swift; sourceTree = "<group>"; };
 		93814C57277719F100E3094C /* DoodlePadModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlePadModels.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		93C5CE842779CEB9003EFCCE /* UIView + Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Constraints.swift"; sourceTree = "<group>"; };
 		93C5CE862779F1FC003EFCCE /* CGPoint + Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint + Operator.swift"; sourceTree = "<group>"; };
 		93C5CE88277A100B003EFCCE /* CanvasControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasControllerTest.swift; sourceTree = "<group>"; };
+		93E16FA72792AEBE00460793 /* Array + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 			children = (
 				93814C66277726E300E3094C /* ColorPickerView.swift */,
 				9385D1CF27773BB500700072 /* BrushPickerView.swift */,
+				934FDBA8277B3DC300213B89 /* BrushSizeSlider.swift */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				93C5CE842779CEB9003EFCCE /* UIView + Constraints.swift */,
+				93E16FA72792AEBE00460793 /* Array + extension.swift */,
 				93C5CE862779F1FC003EFCCE /* CGPoint + Operator.swift */,
 				934FDBA6277AF89300213B89 /* CGSize + Operator.swift */,
 				93C09A26277712C9000C9A09 /* StoreWrapper.swift */,
@@ -432,6 +438,7 @@
 			files = (
 				93814C5A277719F100E3094C /* DoodlePadInteractor.swift in Sources */,
 				9385D1E02778A50F00700072 /* DrawDoodleMaker.swift in Sources */,
+				934FDBA9277B3DC300213B89 /* BrushSizeSlider.swift in Sources */,
 				93814C5B277719F100E3094C /* DoodlePadModels.swift in Sources */,
 				93814C5C277719F100E3094C /* DoodlePad.swift in Sources */,
 				9385D1EA2778C9E300700072 /* DoodleModels.swift in Sources */,
@@ -450,6 +457,7 @@
 				9385D1DA2778665500700072 /* DrawPathMaker.swift in Sources */,
 				9385D1D227773BD200700072 /* DoodleBrush.swift in Sources */,
 				93814C642777231B00E3094C /* DoodleColor.swift in Sources */,
+				93E16FA82792AEBE00460793 /* Array + extension.swift in Sources */,
 				9385D1EB2778C9E300700072 /* DoodleView.swift in Sources */,
 				93814C67277726E300E3094C /* ColorPickerView.swift in Sources */,
 				9385D1D027773BB500700072 /* BrushPickerView.swift in Sources */,

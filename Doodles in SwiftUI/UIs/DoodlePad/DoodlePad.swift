@@ -12,11 +12,6 @@
 import SwiftUI
 import Combine
 
-protocol DoodlePadStoreSpec: AnyObservableObject {
-    var doodles: [DrawDoodle] { get set }
-    func add(_ doodle: DrawDoodle)
-}
-
 struct DoodlePad: View {
     
     struct BackgroundView: View {
@@ -32,12 +27,15 @@ struct DoodlePad: View {
     
     @State var color: DoodleColor = .red
     @State var brush: DoodleBrush = .marker
-    @State var isCanvasDisplay: Bool = true
+    @State var brushSizeDiff: CGFloat = 0
+    @State var isCanvasDisplay: Bool = false
+    
+    var subscriptions: Set<AnyCancellable> = Set()
     
     init() {
         let interactor: DoodlePadInteractor = .init()
         let store: DoodlePadStore = .init()
-        interactor.presenter = store
+        interactor.stateStore = store
         
         self.interactor = interactor
         _store = Store(wrappedValue: store)
@@ -51,17 +49,23 @@ struct DoodlePad: View {
                     DoodleView(store: DoodleStore(
                         doodle: doodle,
                         color: $color,
-                        brush: $brush
+                        brush: $brush,
+                        brushSizeDiff: $brushSizeDiff
                     ))
                 }
                 makeCanvasIfNeeded()
             }
-            HStack {
-                Spacer()
-                ColorPickerView(pickedColor: $color)
-                Spacer()
-                BrushPickerView(pickedBrush: $brush)
-                Spacer()
+            ZStack {
+                Color.white
+                HStack {
+                    Spacer()
+                    ColorPickerView(pickedColor: $color)
+                    Spacer()
+                    BrushPickerView(pickedBrush: $brush)
+                    Spacer()
+                    BrushSizeSlider(brushSize: $brushSizeDiff)
+                    Spacer()
+                }
             }
             .frame(height: 50, alignment: .center)
         }

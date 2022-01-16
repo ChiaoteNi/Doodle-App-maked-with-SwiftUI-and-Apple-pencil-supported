@@ -10,8 +10,10 @@ import Combine
 import SwiftUI
 
 final class DoodleDisplayView: UIView {
-    var newColorTrigger = CurrentValueSubject<DoodleColor?, Never>(nil)
-    var newBrushTrigger = CurrentValueSubject<DoodleBrush?, Never>(nil)
+    var lineColor = CurrentValueSubject<DoodleColor?, Never>(nil)
+    var patinBrush = CurrentValueSubject<DoodleBrush?, Never>(nil)
+    var brushSizeDiff = CurrentValueSubject<CGFloat, Never>(0)
+    
     private var cancellables = Set<AnyCancellable>()
     
     let doodle: DrawDoodle?
@@ -34,8 +36,8 @@ final class DoodleDisplayView: UIView {
     
     private func setUp() {
         backgroundColor = .clear
-        newColorTrigger
-            .combineLatest(newBrushTrigger)
+        lineColor
+            .combineLatest(patinBrush, brushSizeDiff)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] event in
                 guard let self = self,
@@ -44,7 +46,8 @@ final class DoodleDisplayView: UIView {
                     with: doodle.lines,
                     origin: doodle.frame.origin,
                     color: event.0,
-                    brush: event.1
+                    brush: event.1,
+                    sizeDiff: event.2
                 )
                 self.setNeedsDisplay()
             })
@@ -55,7 +58,8 @@ final class DoodleDisplayView: UIView {
         with lines: [DrawLine],
         origin: CGPoint,
         color: DoodleColor?,
-        brush: DoodleBrush?
+        brush: DoodleBrush?,
+        sizeDiff: CGFloat
     ) -> UIImage {
         var doodle: UIImage = UIImage()
         
@@ -67,7 +71,8 @@ final class DoodleDisplayView: UIView {
                 canvasRect: bounds,
                 backgroundImage: doodle,
                 color: color?.uiColor ?? line.paintColor.uiColor,
-                brush: brush ?? line.paintBrush
+                brush: brush ?? line.paintBrush,
+                lineWidthDiff: sizeDiff
             )
         }
         return doodle

@@ -28,6 +28,7 @@ class RectCalculatorTests: XCTestCase {
 }
 
 extension RectCalculatorTests {
+    
     enum Seeds {
         static var minPoint: CGPoint { CGPoint(x: 50, y: 100) }
         static var midPoint: CGPoint { CGPoint(x: 75, y: 150) }

@@ -22,12 +22,13 @@ struct DoodleView: View {
             if store.doodle.isFocus {
                 Rectangle()
                     .colorMultiply(.clear)
-                    .border(.gray, width: 1)
+                    .border(.gray, width: 1 / store.doodle.scale)
             }
             DoodleRepresentView(
                 doodle: store.doodle,
                 color: store.color,
-                brush: store.brush
+                brush: store.brush,
+                brushSizeDiff: store.brushSizeDiff
             )
         }
         .frame(

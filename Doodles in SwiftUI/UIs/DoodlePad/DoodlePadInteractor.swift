@@ -11,14 +11,24 @@
 import Combine
 
 protocol DoodlePadBusinessLogic {
-    //...
-}
-
-protocol DoodlePadPresentationLogic {
-    //...
+    func handleDoodlesUpdate(_ doodles: [DrawDoodle])
 }
 
 final class DoodlePadInteractor: DoodlePadBusinessLogic {
     
-    var presenter: DoodlePadPresentationLogic?
+    var stateStore: DoodlePadPresentationLogic?
+    
+    func handleDoodlesUpdate(_ doodles: [DrawDoodle]) {
+        guard doodles.isEmpty == false else { return }
+        var topIndex: Int = 0
+        for i in 0 ..< doodles.count {
+            if doodles[i].zPriority > doodles[0].zPriority {
+                doodles[topIndex].isFocus = false
+                topIndex = i
+                doodles[i].isFocus = true
+            } else {
+                doodles[i].isFocus = false
+            }
+        }
+    }
 }

@@ -15,6 +15,7 @@ protocol DoodleVMSpec: AnyObservableObject {
     var doodle: DrawDoodle { get }
     var color: DoodleColor { get }
     var brush: DoodleBrush { get }
+    var brushSizeDiff: CGFloat { get }
 }
 
 protocol DoodleStateStoreLogic {
@@ -28,17 +29,20 @@ final class DoodleStore: ObservableObject, DoodleStateStoreLogic, DoodleVMSpec {
     @Published var doodle: DrawDoodle
     @Binding var color: DoodleColor
     @Binding var brush: DoodleBrush
+    @Binding var brushSizeDiff: CGFloat
     
     // MARK: DoodleStatusLogic Properties
     
     init(
         doodle: DrawDoodle,
         color: Binding<DoodleColor>,
-        brush: Binding<DoodleBrush>
+        brush: Binding<DoodleBrush>,
+        brushSizeDiff: Binding<CGFloat>
     ) {
         self.doodle = doodle
         _color = color
         _brush = brush
+        _brushSizeDiff = brushSizeDiff
     }
         
     // MARK: Private properties
