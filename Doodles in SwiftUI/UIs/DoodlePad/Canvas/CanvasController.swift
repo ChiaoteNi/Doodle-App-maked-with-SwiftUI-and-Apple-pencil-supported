@@ -30,6 +30,7 @@ final class CanvasController: CanvasBusinessLogic {
     private var currentBrush: DoodleBrush = .marker
     
     // Current Value
+    private var currentTouch: UITouch?
     private var currentLine: DrawLine?
     private var currentPaths: [DrawPath]? {
         set { currentLine?.paths = newValue ?? [] }
@@ -39,6 +40,7 @@ final class CanvasController: CanvasBusinessLogic {
     // Depended-on Component
     weak var view: CanvasDisplayLogic?
     var store: DoodleStorageLogic?
+
     private let pathMaker: DrawPathMaker
     private let doodleMaker: DrawDoodleMaker
     private let frameCalculator: RectCalculator
@@ -64,9 +66,14 @@ final class CanvasController: CanvasBusinessLogic {
         handleQueue.async { [weak self] in
             guard let self = self else { return }
             let paths = self.updateLocationAndMakePaths(touches)
+            let color: DoodleColor = self.currentColor
+            let brush: DoodleBrush = self.currentBrush
+
+            self.currentPaths?.append(contentsOf: paths)
+            self.view?.displayNewDrawing(paths, color: color.uiColor, brush: brush)
             self.currentLine = DrawLine(
-                paintColor: self.currentColor,
-                paintBrush: self.currentBrush,
+                paintColor: color,
+                paintBrush: brush,
                 frame: rect,
                 paths: paths
             )
@@ -77,7 +84,12 @@ final class CanvasController: CanvasBusinessLogic {
         handleQueue.async { [weak self] in
             guard let self = self else { return }
             guard let line = self.currentLine else { return }
-            let paths = self.updateLocationAndMakePaths(touches)
+
+            let paths = self.updateLocationAndMakePaths(
+                touches,
+                previousTouch: self.currentTouch
+            )
+
             self.currentPaths?.append(contentsOf: paths)
             self.view?.displayNewDrawing(
                 paths,
@@ -88,11 +100,11 @@ final class CanvasController: CanvasBusinessLogic {
     }
     
     func touchEnd() {
-        print("💧")
         handleQueue.async { [weak self] in
             guard let self = self else { return }
             guard let currentLine = self.currentLine else { return }
-            
+            self.currentTouch = nil
+
             let necessaryRect = self.frameCalculator.exportNecessaryRect()
             let line = DrawLine(
                 paintColor: currentLine.paintColor,
@@ -106,6 +118,7 @@ final class CanvasController: CanvasBusinessLogic {
             self.frameCalculator.reset()
             self.doodleMaker.setNewLine(line)
             self.currentLine = nil
+            self.currentTouch = nil
         }
     }
     
@@ -134,37 +147,22 @@ final class CanvasController: CanvasBusinessLogic {
 // MARK: - Private functions.
 extension CanvasController {
 
-    private func updateLocationAndMakePaths(_ touches: [UITouch]) -> [DrawPath] {
-        var currentValidatePath: DrawPath?
-        var currentSlope: CGFloat = 0
-        return touches.compactMap {
-            var path = pathMaker.makeDrawPath(with: $0)
+    private func updateLocationAndMakePaths(_ touches: [UITouch], previousTouch: UITouch? = nil) -> [DrawPath] {
 
-            if let currentPath = currentValidatePath {
-                let slope = currentPath.location.slope(path.location)
-                if slope == currentSlope {
-                    return nil
-                } else {
-                    path.previousLocation = currentPath.location
-                    currentSlope = slope
-                    currentValidatePath = path
-                    frameCalculator.setLocations([path.location])
-                    return path
-                }
-            } else {
-                currentValidatePath = path
-                frameCalculator.setLocations([path.location])
-                return path
-            }
+        var touches = touches
+        if let previousTouch = previousTouch {
+            touches.insert(previousTouch, at: 0)
         }
-    }
-}
-
-private extension CGPoint {
-
-    func slope(_ point: CGPoint) -> CGFloat {
-        let diffX = x - point.x
-        let diffY = y - point.y
-        return x == 0 ? 0 : diffY / diffX
+        
+        return pathMaker.makePaths(with: touches) { [weak self] touch, path in
+            guard let self = self else { return }
+            self.currentTouch = touch
+            let location = path.location
+            let radius = path.width / 2
+            self.frameCalculator.setLocations([
+                CGPoint(x: location.x - radius, y: location.y - radius),
+                CGPoint(x: location.x + radius, y: location.y + radius)
+            ])
+        }
     }
 }

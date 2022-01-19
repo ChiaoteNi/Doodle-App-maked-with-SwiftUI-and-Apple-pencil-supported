@@ -24,7 +24,7 @@ struct Painter {
             UIColor.white.withAlphaComponent(0).setFill()
             context.fill(rect)
             backgroundImage?.draw(in: canvasRect)
-            
+
             paths.forEach {
                 drawStroke(
                     context: context.cgContext,
@@ -51,9 +51,7 @@ struct Painter {
         context.setAlpha(path.alpha)
         context.setLineWidth(path.width + lineWidthDiff)
         context.setLineCap(.round)
-        if context.path == nil {
             context.move(to: previousLocation)
-        }
         context.addLine(to: location)
         context.strokePath()
     }

@@ -17,6 +17,7 @@ struct DoodlePad: View {
     struct BackgroundView: View {
         @Binding var isCanvasDisplay: Bool
         var body: some View {
+//            Image("IMG_0021", bundle: nil)
             Color.white
                 .onTapGesture { isCanvasDisplay = true }
         }

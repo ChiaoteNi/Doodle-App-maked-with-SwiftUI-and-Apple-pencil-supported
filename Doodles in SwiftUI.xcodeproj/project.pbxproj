@@ -43,6 +43,7 @@
 		93C5CE852779CEB9003EFCCE /* UIView + Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE842779CEB9003EFCCE /* UIView + Constraints.swift */; };
 		93C5CE872779F1FC003EFCCE /* CGPoint + Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE862779F1FC003EFCCE /* CGPoint + Operator.swift */; };
 		93C5CE89277A100B003EFCCE /* CanvasControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5CE88277A100B003EFCCE /* CanvasControllerTest.swift */; };
+		93E16FA4278FBC9600460793 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E16FA3278FBC9600460793 /* PhotoPicker.swift */; };
 		93E16FA82792AEBE00460793 /* Array + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E16FA72792AEBE00460793 /* Array + extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		93C5CE842779CEB9003EFCCE /* UIView + Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Constraints.swift"; sourceTree = "<group>"; };
 		93C5CE862779F1FC003EFCCE /* CGPoint + Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint + Operator.swift"; sourceTree = "<group>"; };
 		93C5CE88277A100B003EFCCE /* CanvasControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasControllerTest.swift; sourceTree = "<group>"; };
+		93E16FA3278FBC9600460793 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		93E16FA72792AEBE00460793 /* Array + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				93C099F127757D49000C9A09 /* ContentView.swift */,
+				93E16FA3278FBC9600460793 /* PhotoPicker.swift */,
 				93814C5D277719FB00E3094C /* DoodlePad */,
 			);
 			path = UIs;
@@ -444,6 +447,7 @@
 				9385D1EA2778C9E300700072 /* DoodleModels.swift in Sources */,
 				93C09A27277712C9000C9A09 /* StoreWrapper.swift in Sources */,
 				93C099F227757D49000C9A09 /* ContentView.swift in Sources */,
+				93E16FA4278FBC9600460793 /* PhotoPicker.swift in Sources */,
 				93814C6227771B3200E3094C /* CanvasRepresentView.swift in Sources */,
 				93C099F027757D49000C9A09 /* Doodles_in_SwiftUIApp.swift in Sources */,
 				93C5CE832779BAD1003EFCCE /* DrawLineMaker.swift in Sources */,
